@@ -1,1 +1,10 @@
-.thumbnail{height:280px;width:auto}.thumbnail img{height:180px !important;width:100% !important}body{margin-bottom:30px}
+.main-img{
+  width:100%;
+  margin-bottom:-7px;
+}
+.item-subtitle.item-description{
+  white-space: normal;
+  text-align: justify;
+  font-size: 0.6rem;
+  max-height: 2.4rem;
+}

@@ -1,5 +1,43 @@
 extends ../layout
 
 block content
-  .content-block
-    span 这里是内容
+  .row.no-gutter
+    img.main-img(src="build/index.jpg")
+  .buttons-tab
+    a.tab-link.button.active(href="#tab1") 活动
+    a.tab-link.button(href="#tab2") 社团
+  .tabs
+    #tab1.tab.active
+      - var description = '新年登高是中华民族传统的节庆活动。东方明珠新年登高连续21年以“新年登高步步高”的美好寓意成为上海每年元旦传统的全民健身运动项目以及倡导健康生活的传统节目。“2016上海新年垂直马拉松慈善跑”活动，所有跑友成功参加的跑步里程都将会累积计入总里程。里程还将公益众筹，定向捐赠受助群体——血铅儿童。';
+      - var activities = [1,1,1,1,1,1];
+      each activity in activities
+        .card
+          .card-header 
+            span 东方明珠 | 元旦登高报名
+            button.button.button-link.button-nav.pull-right(style="border: none; margin-right: -0.5rem") 报名
+              span.icon.icon-right
+          .card-content
+            .list-block.media-list
+              ul
+                li.item-content
+                  .item-media(style="padding-top:0;")
+                    img(src="build/minzhu.jpeg" width="50")
+                  .item-inner(style="margin-left: 0.35rem;padding-top: 0;")
+                    .item-subtitle.item-description #{description}
+    #tab2.tab
+      - var description = '上海高校运动联盟，以跑步为核心的跨校运动交流、分享平台，跑步信息发布、报名、志愿者招募，合作体育品牌和主办方的各种福利，结识上海十几所高校的跑者和NTCgirls，与全校已注册师生和校友一起互动、PK你的跑马成绩。最盟，不只运动，遇见感动！';
+      - var activities = [1,1,1,1,1,1];
+      each activity in activities
+        .card
+          .card-header 
+            span 最盟
+            button.button.button-link.button-nav.pull-right(style="border: none; margin-right: -0.5rem") 加入
+              span.icon.icon-right
+          .card-content
+            .list-block.media-list
+              ul
+                li.item-content
+                  .item-media(style="padding-top:0;")
+                    img(src="build/zuimeng.jpeg" width="50")
+                  .item-inner(style="margin-left: 0.35rem;padding-top: 0;")
+                    .item-subtitle.item-description #{description}

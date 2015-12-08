@@ -1,0 +1,25 @@
+2015-12-08T15:20:31.063+0800 I JOURNAL  [initandlisten] journal dir=/data/db/journal
+2015-12-08T15:20:31.067+0800 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-12-08T15:20:31.084+0800 I JOURNAL  [durability] Durability thread started
+2015-12-08T15:20:31.084+0800 I CONTROL  [initandlisten] MongoDB starting : pid=47194 port=27017 dbpath=/data/db 64-bit host=huangjiangning.local
+2015-12-08T15:20:31.084+0800 I JOURNAL  [journal writer] Journal writer thread started
+2015-12-08T15:20:31.085+0800 I CONTROL  [initandlisten] 
+2015-12-08T15:20:31.086+0800 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2015-12-08T15:20:31.086+0800 I CONTROL  [initandlisten] db version v3.0.2
+2015-12-08T15:20:31.086+0800 I CONTROL  [initandlisten] git version: nogitversion
+2015-12-08T15:20:31.086+0800 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-12-08T15:20:31.086+0800 I CONTROL  [initandlisten] allocator: system
+2015-12-08T15:20:31.086+0800 I CONTROL  [initandlisten] options: { processManagement: { fork: true }, systemLog: { destination: "file", path: "mongod.log" } }
+2015-12-08T15:20:31.250+0800 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-12-08T15:20:54.128+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56640 #1 (1 connection now open)
+2015-12-08T15:20:54.129+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56641 #2 (2 connections now open)
+2015-12-08T15:20:54.129+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56642 #3 (3 connections now open)
+2015-12-08T15:20:54.129+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56643 #4 (4 connections now open)
+2015-12-08T15:20:54.130+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56644 #5 (5 connections now open)
+2015-12-08T15:20:54.130+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56645 #6 (6 connections now open)
+2015-12-08T15:20:54.150+0800 I NETWORK  [conn2] end connection 127.0.0.1:56641 (5 connections now open)
+2015-12-08T15:20:54.155+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56646 #7 (6 connections now open)
+2015-12-08T15:20:54.158+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56647 #8 (7 connections now open)
+2015-12-08T15:20:54.158+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56648 #9 (8 connections now open)
+2015-12-08T15:20:54.158+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56649 #10 (9 connections now open)
+2015-12-08T15:20:54.159+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:56650 #11 (10 connections now open)
