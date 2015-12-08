@@ -1,0 +1,45 @@
+{
+  "name": "zuimeng",
+  "version": "1.0.0",
+  "description": "a webApp system for zuimeng",
+  "main": "app.js",
+  "dependencies": {
+    "async": "^1.5.0",
+    "bcrypt": "^0.8.5",
+    "connect-mongo": "^0.8.2",
+    "cookie-parser": "^1.4.0",
+    "crypto": "0.0.3",
+    "express": "^4.13.3",
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^2.1.0",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-less": "^1.1.0",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-nodemon": "^0.4.1",
+    "jade": "^1.11.0",
+    "latest": "^0.2.0",
+    "mocha": "^2.3.4",
+    "moment": "^2.10.6",
+    "mongoose": "^4.2.9",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hjntongji/zuimeng.git"
+  },
+  "keywords": [
+    "webApp"
+  ],
+  "author": "huangjiangning",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hjntongji/zuimeng/issues"
+  },
+  "homepage": "https://github.com/hjntongji/zuimeng#readme"
+}
