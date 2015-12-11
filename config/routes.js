@@ -1,4 +1,5 @@
 var Index = require('../app/controllers/index'); // 主页
+var Run = require('../app/controllers/run'); // 主页
 var User = require('../app/controllers/user'); // 用户页
 var Activity = require('../app/controllers/activity'); // 活动页
 var Mass = require('../app/controllers/mass'); // 社团
@@ -16,6 +17,10 @@ module.exports = function (app) {
 
     // 主页
     app.get('/', Index.index);
+    app.get('/index', Index.index);
+    app.get('/mass', Index.mass);
+    app.post('/run/query', Run.result);
+    app.get('/run/query', Run.query);
 
     // // 注册
     // app.post('/user/signup', User.signup);

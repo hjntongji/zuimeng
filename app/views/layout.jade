@@ -5,13 +5,13 @@ html
     title #{title}
     include ./includes/head
   body
-    .page
-      //- include ./includes/header
-      .content(style="margin-bottom: 3rem")
+    .page(id="#{pageid}", pageIndex="#{pageIndex}")
+      include ./includes/header
+      .content
         block content
-      include ./includes/footer
-    .panel-overlay
-      include ./includes/overlay
+        include ./includes/footer2
+    //- .panel-overlay
+    //-   include ./includes/overlay
     //- .panel.panel-left.panel-reveal
     //-   include ./includes/left
     include ./includes/foot
