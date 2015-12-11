@@ -27,7 +27,7 @@ exports.result = function(req, res) {
         if(!results || results.length === 0) {
           res.render('error', {
             title: '交大 uRun',
-            tip: '没有查到相关信息，重新查询',
+            tip: '没有查到相关信息，请返回重新查询',
             error: error
           });
           return;
