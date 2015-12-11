@@ -1,4 +1,5 @@
 var mysql = require('mysql');
+var iiii=0;
 var getConnection = function() {
     var connection = mysql.createConnection({
             host: '139.196.21.242',
@@ -13,7 +14,7 @@ var getConnection = function() {
 // index page
 exports.result = function(req, res) {
   var name = req.body.name;
-  // console.log(name);
+  console.log(name, iiii++);
   var conn = getConnection();
   if (!name || name.indexOf('delete') >= 0
         || name.indexOf('drop') >= 0
@@ -36,22 +37,21 @@ exports.result = function(req, res) {
             tip: '查询出错',
             error: error
           });
-          return;
         } else if(!results || results.length === 0) {
           res.render('error', {
             title: '交大 uRun',
             tip: '没有找到您的报名信息，请返回重新查询',
             error: error
           });
-          return;
         } else {
           // console.log(results);
           res.render('result', {
             title: '交大 uRun',
             results: results,
           });
-          return;
         }
+        conn.end();
+        return;
     });
   }
 };
