@@ -5,8 +5,9 @@ exports.pull = function(req, res) {
         if (error !== null) {
           console.log('exec error: ' + error);
           res.send('exec error: ' + error);
+        } else {
+          res.send('git pull success!');
         }
-        res.send('git pull success!');
       }
     );
 };
