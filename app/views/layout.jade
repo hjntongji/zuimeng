@@ -5,11 +5,7 @@ html
     title #{title}
     include ./includes/head
   body
-    .page(id="#{pageid}", pageIndex="#{pageIndex}")
-      include ./includes/header
-      .content
-        block content
-      include ./includes/footer
+    block body
     //- .panel-overlay
     //-   include ./includes/overlay
     //- .panel.panel-left.panel-reveal

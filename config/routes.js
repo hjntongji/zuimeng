@@ -19,7 +19,9 @@ module.exports = function (app) {
     // 主页
     app.get('/', Index.index);
     app.get('/index', Index.index);
-    app.get('/mass', Index.mass);
+    
+    // 社团页
+    app.get('/mass', Mass.mass);
 
     // 交大 uRun 参赛号码查询
     app.post('/run/query', Run.result);

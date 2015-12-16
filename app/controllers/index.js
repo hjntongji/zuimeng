@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Activity = mongoose.model('Activity');
 var Category = mongoose.model('Category');
 
-// index page
+// index 模块  inde page
 exports.index = function(req, res) {
   Category
     .find({})
@@ -16,32 +16,10 @@ exports.index = function(req, res) {
       if (err) {
         console.log(err);
       }
-      res.render('index', {
+      res.render('index/index', {
         title: '最盟 首页',
         pageid: 'index',
         pageIndex: 0,
-        categories: categories
-      });
-    });
-};
-// mass page
-exports.mass = function(req, res) {
-  Category
-    .find({})
-    .sort('_id -1')
-    .populate({
-      path: 'activitys',
-      select: 'title poster',
-      options: { limit: 6 }
-    })
-    .exec(function(err, categories) {
-      if (err) {
-        console.log(err);
-      }
-      res.render('mass', {
-        title: '最盟 社团',
-        pageid: 'mass',
-        pageIndex: 1,
         categories: categories
       });
     });
