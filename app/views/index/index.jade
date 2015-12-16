@@ -2,10 +2,14 @@ extends ./body
 
 block content
   .row.no-gutter
-    img.main-img(src="build/index.jpg")
+    img.main-img(src="/build/img/index.jpg")
   .buttons-tab
-    a.tab-link.button.active(href="#tab1") 参赛
-    a.tab-link.button(href="#tab2") 志愿者
+    a.tab-link.button.active(href="#tab1")
+      span.iconfont.icon-run
+      span 参赛
+    a.tab-link.button(href="#tab2") 
+      span.iconfont.icon-zhiyuanzhe
+      span 志愿者
   .tabs
     #tab1.tab.active
       - var description = '新年登高是中华民族传统的节庆活动。东方明珠新年登高连续21年以“新年登高步步高”的美好寓意成为上海每年元旦传统的全民健身运动项目以及倡导健康生活的传统节目。“2016上海新年垂直马拉松慈善跑”活动，所有跑友成功参加的跑步里程都将会累积计入总里程。里程还将公益众筹，定向捐赠受助群体——血铅儿童。';
@@ -21,7 +25,7 @@ block content
               ul
                 li.item-content
                   .item-media(style="padding-top: 0.3rem;")
-                    img(src="build/minzhu.jpeg" width="50")
+                    img(src="/build/img/minzhu.jpeg" width="50")
                   .item-inner(style="margin-left: 0.3rem; padding-top: 0.3rem;")
                     .item-subtitle.item-description #{description}
     #tab2.tab
@@ -38,6 +42,6 @@ block content
               ul
                 li.item-content
                   .item-media(style="padding-top: 0.3rem;")
-                    img(src="build/minzhu.jpeg" width="50")
+                    img(src="/build/img/minzhu.jpeg" width="50")
                   .item-inner(style="margin-left: 0.3rem; padding-top: 0.3rem;")
                     .item-subtitle.item-description #{description}

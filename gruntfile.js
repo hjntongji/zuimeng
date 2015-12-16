@@ -47,11 +47,27 @@ module.exports = function (grunt) {
                     optimization: 2
                 },
                 files: {
-                    'public/build/index.css': 'public/less/index.less'
+                    'public/build/index.css': [
+                        'public/less/iconfont.less',
+                        'public/less/index.less'
+                    ]
                 }
             }
         },
-
+        copy: {
+          fonts: {
+            expand: true,
+            src: 'public/less/fonts/*',
+            dest: 'public/build/fonts/',
+            flatten: true
+          },
+          imgs: {
+            expand: true,
+            src: 'public/img/*',
+            dest: 'public/build/img/',
+            flatten: true
+          }
+        },
         uglify: {
             development: {
                 files: {
@@ -89,7 +105,9 @@ module.exports = function (grunt) {
         // },
 
         concurrent: {
-            tasks: ['nodemon', 'watch', 'less', 'uglify', 'jshint'],
+            tasks: ['nodemon', 'watch', 'less', 'uglify', 'copy:imgs', 'copy:fonts',
+                // 'jshint'
+            ],
             options: {
                 logConcurrentOutput: true
             }
@@ -102,7 +120,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    // grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.option('force', true);
 
