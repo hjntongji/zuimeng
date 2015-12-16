@@ -1,0 +1,33 @@
+extends ../layout
+
+block content
+  each result in results
+    .card
+      .card-content
+        .list-block
+          ul
+            li.item-content
+              .item-inner
+                .item-title 姓名: 
+                .item-after #{result.name}，#{result.closesize2}
+            li.item-content
+              .item-inner
+                .item-title 性别: 
+                .item-after #{result.gender}
+            li.item-content
+              .item-inner
+                .item-title 参赛号码: 
+                .item-after(style="color: red; font-weight: bold") #{result.csid}
+            li.item-content
+              .item-inner
+                .item-title 项目: 
+                .item-after #{result.type}
+            if result.partnername != 0
+              li.item-content
+                .item-inner
+                  .item-title 队友: 
+                  .item-after #{result.partnername}，#{result.closesize}
+            li.item-content
+              .item-inner
+                .item-title 身份: 
+                .item-after #{result.shenfen}
