@@ -23,7 +23,7 @@ exports.result = function(req, res) {
         || name.indexOf('select') >= 0
         || name.indexOf('1') >= 0
         || name.indexOf('where') >= 0) {
-    res.render('error', {
+    res.render('jiaodauRun/error', {
       title: '交大 uRun',
       tip: '信息有误, 请重新查询'
     });
@@ -32,20 +32,20 @@ exports.result = function(req, res) {
   else {
     conn.query('SELECT * FROM profiles where name="' + name + '" or partnername ="' + name + '"', function (error, results, fields) {
         if (error) {
-          res.render('error', {
+          res.render('jiaodauRun/error', {
             title: '交大 uRun',
             tip: '查询出错',
             error: error
           });
         } else if(!results || results.length === 0) {
-          res.render('error', {
+          res.render('jiaodauRun/error', {
             title: '交大 uRun',
             tip: '没有找到您的报名信息，请返回重新查询',
             error: error
           });
         } else {
           // console.log(results);
-          res.render('result', {
+          res.render('jiaodauRun/result', {
             title: '交大 uRun',
             results: results,
           });
@@ -56,7 +56,7 @@ exports.result = function(req, res) {
   }
 };
 exports.query = function(req, res) {
-  res.render('query', {
+  res.render('jiaodauRun/query', {
     title: '交大 uRun',
   });
 };
