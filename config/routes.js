@@ -3,7 +3,7 @@ var Run = require('../app/controllers/run'); // 主页
 var User = require('../app/controllers/user'); // 用户页
 var Activity = require('../app/controllers/activity'); // 活动页
 var Mass = require('../app/controllers/mass'); // 社团
-var Git = require('../app/controllers/git'); // Git
+// var Git = require('../app/controllers/git'); // Git
 
 // var Comment = require('../app/controllers/comment'); // 评论列表
 // var Tag = require('../app/controllers/tag'); // 活动标签
