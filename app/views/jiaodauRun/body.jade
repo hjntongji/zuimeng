@@ -1,8 +1,8 @@
 extends ../layout
 
 block body
-  .page(id="#index")
+  .page
     include ./includes/header
-    .content
+    .content.none-footer-toolbar
       block content
       include ./includes/footer
