@@ -27,8 +27,8 @@ module.exports = function (app) {
     app.post('/run/query', Run.result);
     app.get('/run/query', Run.query);
 
-    // git pull
-    app.get('/git/pull', Git.pull);
+    // // git pull 迁移至 pullCode 服务
+    // app.get('/git/pull', Git.pull);
 
     // // 注册
     // app.post('/user/signup', User.signup);
