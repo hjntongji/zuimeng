@@ -5,10 +5,7 @@ var cookieParser = require('cookie-parser');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-var multer = require('multer');
 var fs = require('fs');
-var methodOverride = require('method-override');
-var errorHandler = require('errorhandler');
 
 var port = process.env.PORT || 3000;
 
@@ -35,21 +32,22 @@ var walk = function (path) {
         }
     });
 };
-
 walk(models_path);
+
 app.set('views', './app/views/pages');
 app.set('view engine', 'jade');
 
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(multer());
 app.use(session({
     secret: 'zuimeng',
     store: new mongoStore({
         url: dbUrl,
         collection: 'sessions'
-    })
+    }),
+    resave: false,
+    saveUninitialized: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 require('./config/routes')(app);

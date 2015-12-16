@@ -1,20 +1,10 @@
 nav.bar.bar-tab
-  if pageid == 'index'
-    a.tab-item.active(href="/index")
-      span.icon.icon-home
-      span.tab-label 首页
-  else
-    a.tab-item(href="/index")
-      span.icon.icon-home
-      span.tab-label 首页
-  if pageid == 'mass'
-    a.tab-item.active(href="/mass")
-      span.icon.icon-friends
-      span.tab-label 社团
-  else
-    a.tab-item(href="/mass")
-      span.icon.icon-friends
-      span.tab-label 社团
+  a.tab-item.active(href="/index")
+    span.icon.icon-home
+    span.tab-label 首页
+  a.tab-item(href="/mass")
+    span.icon.icon-friends
+    span.tab-label 社团
   a.tab-item(href="#")
     span.icon.icon-star
     span.tab-label 报名
