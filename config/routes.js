@@ -30,6 +30,14 @@ module.exports = function (app) {
     // 活动详情页
     app.get('/activity/detail', Activity.detail);
 
+    // 参与
+    app.get('/participate', User.participate);
+
+    // 个人中心
+    app.get('/self', User.index);
+
+
+
     // // git pull 迁移至 pullCode 服务
     // app.get('/git/pull', Git.pull);
 

@@ -1,19 +1,20 @@
 extends ./body
 
 block content
-  .row.no-gutter
-    img.main-img(src="/build/img/index.jpg")
   .buttons-tab
     a.tab-link.button.active(href="#tab1")
-      span.iconfont.icon-run
-      |  参赛
+      span.iconfont.icon-directionsrun
+      |  全部
     a.tab-link.button(href="#tab2") 
-      span.iconfont.icon-zhiyuanzhe
-      |  志愿者
+      span.iconfont.icon-directionsrun
+      |  报名中
+    a.tab-link.button(href="#tab3") 
+      span.iconfont.icon-directionsrun
+      |  报名成功
   .tabs
     #tab1.tab.active
       - var description = '新年登高是中华民族传统的节庆活动。东方明珠新年登高连续21年以“新年登高步步高”的美好寓意成为上海每年元旦传统的全民健身运动项目以及倡导健康生活的传统节目。“2016上海新年垂直马拉松慈善跑”活动，所有跑友成功参加的跑步里程都将会累积计入总里程。里程还将公益众筹，定向捐赠受助群体——血铅儿童。';
-      - var activities = [1,1,1,1,1,1];
+      - var activities = [1];
       each activity in activities
         .card
           a.none-color(href="/activity/detail")
@@ -31,7 +32,7 @@ block content
                       .item-subtitle.item-description #{description}
     #tab2.tab
       - var description = '新年登高是中华民族传统的节庆活动。东方明珠新年登高连续21年以“新年登高步步高”的美好寓意成为上海每年元旦传统的全民健身运动项目以及倡导健康生活的传统节目。“2016上海新年垂直马拉松慈善跑”活动，所有跑友成功参加的跑步里程都将会累积计入总里程。里程还将公益众筹，定向捐赠受助群体——血铅儿童。';
-      - var activities = [1,1,1,1,1,1];
+      - var activities = [1];
       each activity in activities
         .card
           .card-header(style="padding: .3rem .75rem;")
@@ -46,3 +47,4 @@ block content
                     img(src="/build/img/minzhu.jpeg" width="50")
                   .item-inner(style="margin-left: 0.3rem; padding-top: 0.3rem;")
                     .item-subtitle.item-description #{description}
+    #tab3.tab
