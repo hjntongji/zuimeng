@@ -12,4 +12,187 @@ mixin header
 
 block body
   #activity.page
-    +header
+    //- +header
+    .content
+      .main.race-page
+        .race--carousel
+          .swiper-container.swiper-container-horizontal
+            .swiper-wrapper(style='transition-duration: 0ms; transform: translate3d(-414px, 0px, 0px);')
+              .swiper-slide.swiper-slide-duplicate.swiper-slide-prev(data-swiper-slide-index='1', style='width: 414px;')
+                img(alt='', src='http://pic.iranshao.com/photo/image/88a22e339f03e420a0fea0f743e83283.jpg!660x360')
+              .swiper-slide.swiper-slide-active(data-swiper-slide-index='0', style='width: 414px;')
+                img(alt='', src='http://pic.iranshao.com/photo/image/4c99b9c33da8670286fa3124812c0617.jpg!660x360')
+              .swiper-slide.swiper-slide-next(data-swiper-slide-index='1', style='width: 414px;')
+                img(alt='', src='http://pic.iranshao.com/photo/image/88a22e339f03e420a0fea0f743e83283.jpg!660x360')
+              .swiper-slide.swiper-slide-duplicate(data-swiper-slide-index='0', style='width: 414px;')
+                img(alt='', src='http://pic.iranshao.com/photo/image/4c99b9c33da8670286fa3124812c0617.jpg!660x360')
+            .swiper-pagination
+              span.swiper-pagination-bullet.swiper-pagination-bullet-active
+              span.swiper-pagination-bullet
+        .race--summary
+          .race--name 柏林马拉松
+          .race--rating
+            span.score.text-primary 评分: 4.5
+            span.race--indicators
+          .race--desc.text-gray.text-sm
+            | WMM世界六大马拉松赛事之一，被称为这个地球上最快的赛道，过去8个男子世界纪录都是在柏林创造的。比赛路线可以让你来一次20世界历史回顾之旅。你会跑过雄伟壮丽的历史建筑，前东柏林严肃整齐的大厦，以及西柏林现代、高科技、充满商业色彩的楼宇。
+          .race--stats
+            span.race--stats-item
+              span.text-primary 16
+              span.text-gray 人参加过
+            span.race--stats-item
+              span.text-primary 64
+              span.text-gray 人预计参加
+            span.race--stats-item
+              span.text-primary 75
+              span.text-gray 人关注
+          .race--actions.clear
+            a.btn.btn-primary(href='/m/races/618/done_interest?interest_race_id=1424', onclick="_czc.push(['_trackEvent', 'interest', 'click-done-interest-from-race-mobile', '618-柏林马拉松','0','']); mixpanel.track('赛事点评-参加过',{'race':'618-柏林马拉松', 'type':'done', 'position':'mobile-race', 'user':''});") 参加过
+            a.btn.btn-success(href='/m/races/618/do_interest', onclick="_czc.push(['_trackEvent', 'interest', 'click-do-interest-from-race-mobile', '618-柏林马拉松','0','']); mixpanel.track('赛事点评-预计参加',{'race':'618-柏林马拉松', 'type':'do', 'position':'mobile-race', 'user':''});") 预计参加
+          .race--attr
+            span.text-gray 比赛地点：
+            |       德国 柏林
+          .race--attr
+            span.text-gray 比赛日期：
+            |       2016年09月25日
+          .race--attr
+            span.text-gray 报名日期：
+            |       2015.10.19 - 2016.06.01
+          .race--attr
+            span.text-gray 比赛组别：
+            |       全程马拉松
+        .race--groups
+          .block
+            .block-header 赛事介绍
+            .block-body
+              .race--groups-container
+                .race--group-wrapper
+                  .race--group-name 全程马拉松
+                  ul.race--group-item-list
+                    li.race--group-item
+                      span.text-gray 报名时间：
+                      |                   2015.10.19 - 2016.06.01
+                    li.race--group-item
+                      span.text-gray 起跑时间：
+                      |                   2016-09-25 08:45
+                    li.race--group-item
+                      span.text-gray 报名费用：
+                      |                   98 € /人
+                    li.race--group-item
+                      span.item-label.text-gray 关门时限：
+                      .item-cont  6小时15分
+                    li.race--group-item
+                      span.text-gray 人数限额：
+                      |                   40000
+              .text-center
+                a.btn.btn-default.more(href='/m/races/618/description') 查看更多
+        .block
+          .block-header 赛事动态
+          .block-body
+            .race--posts
+              a(href='/m/races/618/posts')
+                .race--post-item
+                  | 【抽签公布】抽签结果已在12月1日公布，每位报名选手都会收到组委会邮件，现可查看是否中签。未中签的选手仍可以在爱燃烧一键报名免抽参赛：http://iranshao.com/register/reg_races/382
+            .text-center
+              a.btn.btn-default.more(href='/m/races/618/posts') 查看更多
+        .block
+          .block-header 赛事照片
+          .block-body
+            .race--albums.clear
+              a.race--albums-item(href='/m/albums/4672')
+                img(alt='2015 柏林马拉松', src='http://pic.iranshao.com/photo/image/1-format530-3ad7fdf003a9774811ec011b905d375e.jpeg!168x168')
+                span.caption 33张
+              a.race--albums-item(href='/m/albums/1210')
+                img(alt='赛事历年完赛奖牌', src='http://pic.iranshao.com/photo/image/2007-e96d27d3b53afe6954e4223a313af373.jpg!168x168')
+                span.caption 6张
+        .block
+          .block-header 赛事点评
+          .block-body
+            .race--interests
+              .race--interest-item
+                a.user(href='/m/people/irs_3e9e59')
+                  img(src='http://bskavatar.b0.upaiyun.com/profile/avatar/a0043c5dd4049ad4386db0214ec005ee.jpeg!normal')
+                .race--interest-item-cont
+                  a.nick(href='/m/people/irs_3e9e59') CindyChen
+                  span.tag-year 2016
+                  .comment 享受
+                // <div class="time text-gray"></div>
+              .race--interest-item
+                a.user(href='/m/people/li-qiang-2d1ca9')
+                  img(src='http://bskavatar.b0.upaiyun.com/profile/avatar/c8e24eeeb68e8a08253e7c9ebe75887b.jpg!normal')
+                .race--interest-item-cont
+                  a.nick(href='/m/people/li-qiang-2d1ca9') 骨精强
+                  span.tag-year 2016
+                  .comment 享受每一分钟
+                // <div class="time text-gray"></div>
+              .race--interest-item
+                a.user(href='/m/people/zhi-zai-qian-li')
+                  img(src='http://bskavatar.b0.upaiyun.com/default.jpg!normal')
+                .race--interest-item-cont
+                  a.nick(href='/m/people/zhi-zai-qian-li') 志在千里
+                  span.tag-year 2016
+                  .comment 我已中签想跟团一起活动，可以吗？就是当亲友团。
+                // <div class="time text-gray"></div>
+            .text-center
+              a.btn.btn-default.more(href='/m/races/618/interests') 查看更多
+        .block
+          .block-header 赛事日记
+          .block-body
+            .race--diaries
+              .race--diary
+                a.avatar(href='/m/people/bing-hong-cha')
+                  img(src='http://bskavatar.b0.upaiyun.com/profile/avatar/b23d1051db65d24b995232e8d1210896.jpg!normal')
+                .race--diary-cont
+                  a.race--diary-title(href='/diaries/1282') 柏林马拉松奖牌-给女儿的第一个礼物
+                  .race--diary-user
+                    a.nick(href='/m/people/bing-hong-cha') 冰红茶
+                    span.tag-year 2015
+                  a.race--diary-body(href='/diaries/1282')
+                    | 距离柏马完赛都快一个月时间了，现在才抽空写点，也是够懒的。2015年9月24日，从西安北站出发，乘坐高铁G664 到达北京西，就马不停蹄的望北京机场赶去，乘坐俄罗斯环空航空公司 UN8888 波...
+                  .race--diary-images.clear
+                    a(href='/diaries/1282')
+                      img(alt='柏林马拉松奖牌-给女儿的第一个礼物', src='http://pic.iranshao.com/photo/image/IMG_2053-bbfb94644593dcb260b85f841283c2aa.JPG!168x168')
+                    a(href='/diaries/1282')
+                      img(alt='柏林马拉松奖牌-给女儿的第一个礼物', src='http://pic.iranshao.com/photo/image/IMG_2065-2c6ec6ddb89f961e0178f13370c93f0b.JPG!168x168')
+                    a(href='/diaries/1282')
+                      img(alt='柏林马拉松奖牌-给女儿的第一个礼物', src='http://pic.iranshao.com/photo/image/IMG_2064-7e6dc122711a46c313c7ca093603d946.JPG!168x168')
+                    a(href='/diaries/1282')
+                      img(alt='柏林马拉松奖牌-给女儿的第一个礼物', src='http://pic.iranshao.com/photo/image/IMG_2068-1dce3cf70ac5f4a47e7ed53fd6ca86b0.JPG!168x168')
+                  .race--diary-options
+                    a.act.vote(href='javascript:;')
+                      i.fa.fa-thumbs-o-up
+                      span.voted-count.js-voted-count 11
+                    a.act.comment(href='/diaries/1282#create_reply')
+                      i.fa.fa-comment-o
+                      span.commented-count 5
+                    span.time.text-gray 2015-10-22 17:20
+              .race--diary
+                a.avatar(href='/m/people/nan-fan')
+                  img(src='http://bskavatar.b0.upaiyun.com/profile/avatar/6f3b34e177b1f8d8d6ddd7bb537ce274.jpg!normal')
+                .race--diary-cont
+                  a.race--diary-title(href='/diaries/1202') 柏林，不仅我一个人完赛
+                  .race--diary-user
+                    a.nick(href='/m/people/nan-fan') 南帆
+                    span.tag-year 2016
+                  a.race--diary-body(href='/diaries/1202')
+                    | 其实没什么好说，柏林全程无悲无喜，没撞墙，丢了盐丸，安全完赛，成绩比之前的PB慢了两分钟 但是必须要说的是，我老婆，之前只最多跑过10公里，月跑量不超过50，在毫无准备的情况下被我报名骗上赛道，...
+                  .race--diary-images.clear
+                    a(href='/diaries/1202')
+                      img(alt='柏林，不仅我一个人完赛', src='http://pic.iranshao.com/photo/image/IMG_1399-86b6f6a062caf48130cc9f907f203731.jpg!168x168')
+                    a(href='/diaries/1202')
+                      img(alt='柏林，不仅我一个人完赛', src='http://pic.iranshao.com/photo/image/IMG_1409-8b94a739e6a643300d2ed60df9943c5d.jpg!168x168')
+                    a(href='/diaries/1202')
+                      img(alt='柏林，不仅我一个人完赛', src='http://pic.iranshao.com/photo/image/347484_205213141_XLarge-a9ab0d3e5ca400e248c06f951ce8c220.jpg!168x168')
+                    a(href='/diaries/1202')
+                      img(alt='柏林，不仅我一个人完赛', src='http://pic.iranshao.com/photo/image/347478_206134995_XLarge-e0c3fefacf655b2118d52392a476dc83.jpg!168x168')
+                  .race--diary-options
+                    a.act.vote(href='javascript:;')
+                      i.fa.fa-thumbs-o-up
+                      span.voted-count.js-voted-count 16
+                    a.act.comment(href='/diaries/1202#create_reply')
+                      i.fa.fa-comment-o
+                      span.commented-count 9
+                    span.time.text-gray 2015-10-14 19:14
+            .text-center
+              a.btn.btn-default.more(href='/m/races/618/diaries') 查看更多
+
