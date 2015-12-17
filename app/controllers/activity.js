@@ -8,19 +8,22 @@ var path = require('path');
 
 // detail page
 exports.detail = function (req, res) {
-    var id = req.params.id;
-
-    Activity.update({
-        _id: id
-    }, {
-        $inc: {
-            pv: 1
-        }
-    }, function (err) {
-        if (err) {
-            console.log(err);
-        }
+    res.render('index/activity', {
+        title: '最盟 活动详情页'
     });
+    // var id = req.params.id;
+
+    // Activity.update({
+    //     _id: id
+    // }, {
+    //     $inc: {
+    //         pv: 1
+    //     }
+    // }, function (err) {
+    //     if (err) {
+    //         console.log(err);
+    //     }
+    // });
 
     // Activity.findById(id, function (err, movie) {
     //     Comment

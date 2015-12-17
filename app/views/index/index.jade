@@ -16,15 +16,15 @@ block content
       - var activities = [1,1,1,1,1,1];
       each activity in activities
         .card
-          .card-header(style="padding: .3rem .75rem;")
-            span(style="font-size: 0.8rem; font-weight: bold;") 东方明珠 | 元旦登高报名
-            button.button.button-link.button-nav.pull-right(style="border: none; margin-right: -0.5rem") 报名
-              span.icon.icon-right
-          .card-content
-            .list-block.media-list
-              ul
-                li
-                  a.none-color.item-content(href="/activity/deatail")
+          a.none-color(href="/activity/detail")
+            .card-header(style="padding: .3rem .75rem;")
+              span(style="font-size: 0.8rem; font-weight: bold;") 东方明珠 | 元旦登高报名
+              button.button.button-link.button-nav.pull-right(style="border: none; margin-right: -0.5rem") 报名
+                span.icon.icon-right
+            .card-content
+              .list-block.media-list
+                ul
+                  li.item-content
                     .item-media(style="padding-top: 0.3rem;")
                       img(src="/build/img/minzhu.jpeg" width="50")
                     .item-inner(style="margin-left: 0.3rem; padding-top: 0.3rem;")
