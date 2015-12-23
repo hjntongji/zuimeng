@@ -1,5 +1,16 @@
+@base-color: #0894ec;
+@grey: #5f646e;
+@light-grey: #7d7d7d;
+@black: #3d4145;
+@white: #fff;
+@bgColor: #F9F9F9;
+
+.bar-tab .tab-item .icon{
+    font-weight: bold;
+}
+
 .content {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .none-footer-toolbar.content {
@@ -11,26 +22,98 @@
     margin-bottom: -7px;
 }
 
-.item-subtitle.item-description {
-    white-space: normal;
-    text-align: justify;
-    font-size: 0.6rem;
-    max-height: 2.4rem;
-}
 
-.list-block .item-title {
-    margin-left: 2.5rem;
-}
 
-.list-block .item-after {
-    margin-right: 3rem;
-    color: green;
-    font-weight: bold;
-}
 a.none-color {
-  color: #3d4145;
+  color: @black;
 }
+
 .text-custom p {
     color: #0894ec;
     font-weight: bold;
+}
+.zuimeng.list-block {
+    margin: 0 0.3rem 0.3rem 0.3rem;
+    ul {
+        background: inherit;
+        li {
+            background: @white;
+            height: 4rem;
+            border-radius: 0.3rem;
+            margin-bottom: 0.2rem;
+        }
+    }
+    ul:after {
+        height: 0;
+    }
+    .item-media img {
+        border-radius: .2rem;
+    }
+    .item-content {
+        padding-left: .4rem;
+    }
+    .item-inner {
+        margin-left: .4rem;
+    }
+    .item-inner:after {
+        height: 0;
+    }
+    .item-title{
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+    }
+    .item-subtitle{
+        font-size: 0.6rem;
+        line-height: 0.9rem;
+        height: 0.9rem;
+        color: @light-grey;
+    }
+    .item-subtitle.last {
+        color: @grey;
+        margin-top: 0.4rem;
+    }
+    .item-left {
+        width: 4rem;
+        white-space: nowrap;
+        background-color: @bgColor;
+        -webkit-flex-shrink: 0;
+        -ms-flex: 0 0 auto;
+        -webkit-flex-shrink: 0;
+        flex-shrink: 0;
+        padding-left: .4rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        height: 100%;
+        position: relative;
+        border-radius: 0 0.3rem 0.3rem 0;
+        p {
+            padding: 0;
+            margin: 0;
+            font-size: 0.6rem;
+            display: block;
+            color: @grey;
+            margin-top: 0.2rem;
+        }
+        .price {
+            color: @base-color;
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
+        }
+    }
+    // .item-content:after{
+    //     content: '';
+    //     position: absolute;
+    //     left: 0;
+    //     bottom: 0;
+    //     right: auto;
+    //     top: auto;
+    //     height: 1px;
+    //     width: 100%;
+    //     background-color: #ddd;
+    //     display: block;
+    //     z-index: 15;
+    //     -webkit-transform-origin: 50% 100%;
+    //     transform-origin: 50% 100%;
+    // }
 }
