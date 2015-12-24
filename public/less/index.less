@@ -21,9 +21,191 @@
     width: 100%;
     margin-bottom: -7px;
 }
+.swiper-container {
+    .swiper-slide img {
+        width: 100%;
+    }
+    padding-bottom: 0;
+    height: 10rem;
+}
+.race-summary{
+    font-size: 0.7rem;
+    line-height: 1rem;
+    margin-bottom: 0.4rem;
+    background-color: @white;
+    padding: 0.6rem 0.5rem;
+    .race-name {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+    .race-rating {
+        word-wrap: break-word;
+        word-break: break-all;
+        margin-top: 0.45rem;
+        .score {
+            margin-right: 0.8rem;
+        }
+    }
+    .race-desc {
+        line-height: 0.8rem;
+        font-size: 0.6rem;
+        margin-top: 0.6rem;
+        text-align: justify;
+    }
+    .race-stats {
+        margin-top: 0.45rem;
+    }
+    .race-stats-item {
+        margin-right: 0.5rem;
+    }
+    .race-actions {
+        margin-top: 0.8rem;
+        text-align: center;
+        .btn:first-child {
+            margin-right: 8.33%;
+        }
+        .btn {
+            width: 45.83%;
+            margin-bottom: 0.8rem;
+            float: left;
+        }
+    }
+    .race-attr {
+        font-size: .7rem;
+        line-height: .7rem;
+        margin-bottom: .4rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.race-groups {
+    padding-top: 0.8rem;
+    background-color: @white;
+}
+.race-groups-container {
+    margin-bottom: .65rem;
+}
+.race-group-name {
+    font-weight: bold;
+    font-size: .7rem;
+    line-height: 1rem;
+    color: @black;
+}
+.race-group-item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: @black;
+}
+.race-group-item {
+    list-style: none;
+    font-size: .7rem;
+    line-height: 1rem;
+}
 
+.block {
+    background-color: @white;
+    padding: 0 .5rem;
+    .block-header {
+        font-size: .8rem;
+        padding-top: .2rem;
+        padding-bottom: .55rem;
+        border-bottom: solid 1px @bgColor;
+    }
+    .block-body {
+        padding: .8rem 0;
+        .more {
+            width: 7rem;
+        }
+    }
+}
 
+.btn {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: @white;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    outline: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    -webkit-appearance: none;
+}
+.btn-primary {
+    background-color: #ff6920;
+    border-color: #ff6920;
+    color: @white;
+}
+.btn-default {
+    background-color: #fff;
+    border-color: #ff6920;
+    color: #ff6920;
+}
+.btn-success {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    color: #fff;
+}
+.bar-bottom {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+}
+.bar-bottom.col-2 .follow {
+    width: 25%;
+}
+.bar-bottom .reg {
+    width: 37.5%;
+    border-right: solid 1px #eee;
+}
+.bar-bottom.col-2 .other {
+    width: 75%;
+}
+.bar-bottom .follow {
+    color: #000;
+    border-top: solid 1px #eee;
+    border-right: solid 1px #eee;
+    padding-top: 0;
+    width: 25%;
+}
+.bar-bottom .btn {
+    float: left;
+    padding: 0.6rem;
+    height: 2.4rem;
+    line-height: 1.2rem;
+}
+.bar-bottom .follow .txt {
+    font-size: 0.6rem !important;
+    line-height: 1;
+}
+.btn-flat {
+    border-radius: 0px !important;
+}
 
+.clear:before, .clear:after {
+    display: table;
+    content: " ";
+}
+.clear:after {
+    clear: both;
+}
+.text-primary {
+    color: @base-color;
+}
+.text-gray {
+    color: @light-grey;
+}
+.text-center {
+    text-align: center;
+}
 a.none-color {
   color: @black;
 }
