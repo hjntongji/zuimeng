@@ -1,16 +1,55 @@
 extends ./body
 
 block content
-  .content-block
-    .inner.userinfo
-      .user_big_avatar
-        img.user_avatar(src='https://avatars.githubusercontent.com/u/4285361?v=3&s=120', title='hjntongji')
-      a.dark hjntongji
-      .user_profile
-        ul.unstyled
-          span.big 15
-          |  积分
-          li
-            i.fa.fa-lg.fa-fw.fa-github
-            a.dark(href='https://github.com/hjntongji', target='_blank') @hjntongji
-      p.col_fade 注册时间 8 个月前
+  .content
+    .user-profile
+      .user-img
+        img(src="http://tp3.sinaimg.cn/2784220302/180/5648799551/1")
+      .user-info
+        span.user-name __Johning
+        span.user-male 
+          i.icon.icon-male
+      .user-feel
+        p Nothing can be recived by insiting on it ! 
+      .user-labels
+        .item-list
+          span.item-li [同济]
+          span.item-li [跑步]
+          span.item-li [IT]
+    .list-block
+      ul
+        li.item-content.item-link
+          .item-media
+            i.icon.icon-run
+          .item-inner
+            .item-title 我的活动
+        li.item-content.item-link
+          .item-media
+            i.icon.icon-friends
+          .item-inner
+            .item-title 我的社团
+        li.item-content.item-link
+          .item-media
+            i.icon.icon-star
+          .item-inner
+            .item-title 我的关注
+        li.item-content.item-link
+          .item-media
+            i.icon.icon-message
+          .item-inner
+            .item-title 我的消息
+    .list-block
+      ul
+        li.item-content.item-link
+          .item-media
+            i.icon.icon-me
+          .item-inner
+            .item-title 我的账号
+        li.item-content.item-link
+          .item-media
+            i.icon.icon-settings
+          .item-inner
+            .item-title 我的设置
+
+
+    
