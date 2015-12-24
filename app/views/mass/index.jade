@@ -1,21 +1,41 @@
 extends ./body
 
 block content
-  .row.no-gutter
-    img.main-img(src="/build/img/mass.jpeg")
+  .swiper-container(data-space-between="10", data-loop="true", style="height:6rem")
+    .swiper-wrapper
+      .swiper-slide
+        img(src="/build/img/mass.jpeg")
+      .swiper-slide
+        img(src="/build/img/4c99b9c33da8670286fa3124812c0617.jpg!660x360")
+    .swiper-pagination
   - var description = '上海高校运动联盟，以跑步为核心的跨校运动交流、分享平台，跑步信息发布、报名、志愿者招募，合作体育品牌和主办方的各种福利，结识上海十几所高校的跑者和NTCgirls，与全校已注册师生和校友一起互动、PK你的跑马成绩。最盟，不只运动，遇见感动！';
   - var activities = [1,1,1,1,1,1];
-  each activity in activities
-    .card
-      .card-header 
-        span 最盟
-        button.button.button-link.button-nav.pull-right(style="border: none; margin-right: -0.5rem") 加入
-          span.icon.icon-right
-      .card-content
-        .list-block.media-list
-          ul
+  .zuimeng.list-block.media-list
+      ul
+        each activity in activities
+          a.none-color(href="/mass/detail")
             li.item-content
-              .item-media(style="padding-top:0;")
-                img(src="/build/img/zuimeng.jpeg" width="50")
-              .item-inner(style="margin-left: 0.35rem;padding-top: 0;")
-                .item-subtitle.item-description #{description}
+              .item-media
+                img(src="/build/img/zuimeng.jpeg" style="width:4.2rem; height: 3rem")
+              .item-inner
+                .item-title 拉风跑步俱乐部
+                .item-subtitle 
+                  span.icon.icon-friends
+                  span #{description}  
+                .item-subtitle.last
+                  span.icon.icon-star
+                  span 7  
+                  span  上海同济 
+              .item-left
+                .item-button
+                  //- if activity === 1 
+                  //-   p.price ￥60 起
+                  //- else
+                  //-   p.price 免费
+                  p.price 跑步
+                  p.star
+                    span.icon.icon-star
+                    span  关注 
+                  p.order
+                    span.icon.icon-cart 
+                    span  加入

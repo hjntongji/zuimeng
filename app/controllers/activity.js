@@ -9,7 +9,8 @@ var path = require('path');
 // detail page
 exports.detail = function (req, res) {
     res.render('index/activity', {
-        title: '最盟 活动详情页'
+        title: '最盟 活动详情页',
+        pageid: 'activityDetail'
     });
     // var id = req.params.id;
 

@@ -1,0 +1,133 @@
+extends ../layout
+
+mixin header
+  header.bar.bar-nav
+    a.button.button-link.button-nav.pull-left.back(href="/index")
+      span.icon.icon-left
+      | 返回 
+    h1.title
+      span 活动详情 
+      span | 
+      span(style="font-size: 0.7rem; color: #0894ec;") 微信号:最盟 
+
+block body
+  #massDetail.page
+    //- +header
+    .content
+      .swiper-container(data-space-between="10", data-loop="true")
+        .swiper-wrapper
+          .swiper-slide
+            img(src="/build/img/88a22e339f03e420a0fea0f743e83283.jpg!660x360")
+          .swiper-slide
+            img(src="/build/img/4c99b9c33da8670286fa3124812c0617.jpg!660x360")
+        .swiper-pagination
+      .race-summary
+        .race-name 拉风
+        .race-rating
+          span.score.text-primary 评分: 4.5
+          span.race--indicators
+        .race-desc.text-gray.text-sm
+          | 上海高校运动联盟，以跑步为核心的跨校运动交流、分享平台，跑步信息发布、报名、志愿者招募，合作体育品牌和主办方的各种福利，结识上海十几所高校的跑者和NTCgirls，与全校已注册师生和校友一起互动、PK你的跑马成绩。最盟，不只运动，遇见感动！
+        .race-stats
+          span.race-stats-item
+            span.text-primary 673
+            span.text-gray 人加入
+          //- span.race-stats-item
+          //-   span.text-primary 64
+          //-   span.text-gray 人预计参加
+          span.race-stats-item
+            span.text-primary 750
+            span.text-gray 人关注
+        //- .race-actions.clear
+        //-   a.btn.btn-primary(href='#', onclick="") 参加过
+        //-   a.btn.btn-success(href='#', onclick="") 预计参加
+        //- .race-attr
+        //-   span.text-gray 比赛地点：
+        //-   |       德国 柏林
+        //- .race-attr
+        //-   span.text-gray 比赛日期：
+        //-   |       2016年09月25日
+        //- .race-attr
+        //-   span.text-gray 报名日期：
+        //-   |       2015.10.19 - 2016.06.01
+        //- .race-attr
+        //-   span.text-gray 比赛组别：
+        //-   |       全程马拉松
+      .race-groups
+        .block
+          .block-header 社团介绍
+          .block-body
+            .race-groups-container
+              .race-group-wrapper
+                //- .race-group-name 跑步社团
+                ul.race-group-item-list
+                  li.race-group-item
+                    span.text-gray 成立时间：
+                    |                   2012.9
+                  li.race-group-item
+                    span.text-gray 招新时间：
+                    |                   每年3月、9月
+                  li.race-group-item
+                    span.text-gray 报名费用：
+                    |                   5 ￥ /人
+                  li.race-group-item
+                    span.text-gray 所在学校：
+                    |     同济大学
+                  li.race-group-item
+                    span.text-gray 人数限额：
+                    |                   40000
+            .text-center
+              a.btn.btn-default.more(href='#') 查看更多
+      .buttons-tab(style="margin-top:0.4rem")
+        a.tab-link.button.active(href="#tab1")
+          span.iconfont.icon-run
+          |  正在进行的活动
+        a.tab-link.button(href="#tab2") 
+          span.iconfont.icon-zhiyuanzhe
+          |  往期精彩
+      .tabs
+        #tab1.tab.active
+          - var activities = [0,1];
+          .zuimeng.list-block.media-list
+            ul
+              each activity in activities
+                a.none-color(href="/activity/detail")
+                  li.item-content
+                    .item-media
+                      img(src="/build/img/minzhu.jpeg" style="width:4.2rem; height: 3rem")
+                    .item-inner
+                      .item-title 东方明珠元旦登高
+                      .item-subtitle 
+                        span.icon.icon-friends
+                        span 同济拉风  
+                        span.icon.icon-star
+                        span 7 
+                      .item-subtitle.last
+                        span.icon.icon-clock 
+                        span 2016/01/01 
+                        span 上海
+                    .item-left
+                      .item-button
+                        if activity === 1 
+                          p.price ￥60 起
+                        else
+                          p.price 免费
+                        p.star
+                          span.icon.icon-star
+                          span  关注 
+                        p.order
+                          span.icon.icon-cart 
+                          span  报名
+        #tab2.tab
+          - var activities = [0,1,0,0,1,1,0,1,1,1];
+          | 往期精彩
+    .bar-bottom.col-2
+      .follow-container.js-follow-container
+        a.btn.btn-flat.follow(href='#', data-method='post', data-remote='true', rel='nofollow')
+          span.state-unfollow
+            .icon
+              i.fa.fa-eye
+            .txt
+              span 关注
+        a.btn.btn-flat.btn-primary.reg.other(href='#') 加入
+

@@ -23,3 +23,10 @@ exports.mass = function(req, res) {
       });
     });
 };
+
+exports.detail = function(req, res) {
+  res.render('mass/detail', {
+        title: '最盟 社团详情页',
+        pageid: 'massDetail'
+    });
+};

@@ -23,6 +23,9 @@ module.exports = function (app) {
     // 社团页
     app.get('/mass', Mass.mass);
 
+    // 社团详情页
+    app.get('/mass/detail', Mass.detail);
+
     // 交大 uRun 参赛号码查询
     app.post('/run/query', Run.result);
     app.get('/run/query', Run.query);
