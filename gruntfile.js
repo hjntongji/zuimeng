@@ -1,5 +1,9 @@
 module.exports = function (grunt) {
 
+    require('load-grunt-tasks')(grunt);
+    // 
+    require('time-grunt')(grunt);
+
     grunt.initConfig({
         watch: {
             jade: {
@@ -47,7 +51,7 @@ module.exports = function (grunt) {
                     optimization: 2
                 },
                 files: {
-                    'public/build/index.css': [
+                    'dist/build/index.css': [
                         'public/less/iconfont.less',
                         'public/less/index.less'
                     ]
@@ -58,21 +62,21 @@ module.exports = function (grunt) {
           fonts: {
             expand: true,
             src: 'public/less/fonts/*',
-            dest: 'public/build/fonts/',
+            dest: 'dist/build/fonts/',
             flatten: true
           },
           imgs: {
             expand: true,
             src: 'public/img/*',
-            dest: 'public/build/img/',
+            dest: 'dist/build/img/',
             flatten: true
           }
         },
         uglify: {
             development: {
                 files: {
-                    'public/build/admin.min.js': 'public/js/admin.js',
-                    'public/build/detail.min.js': [
+                    'dist/build/admin.min.js': 'public/js/admin.js',
+                    'dist/build/detail.min.js': [
                         'public/js/detail.js'
                     ]
                 }
@@ -113,15 +117,6 @@ module.exports = function (grunt) {
             }
         }
     });
-
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-nodemon');
-    grunt.loadNpmTasks('grunt-concurrent');
-    grunt.loadNpmTasks('grunt-mocha-test');
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    // grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.option('force', true);
 

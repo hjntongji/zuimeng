@@ -49,7 +49,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 require('./config/routes')(app);
 
 if ('development' === app.get('env')) {
