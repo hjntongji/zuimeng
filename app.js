@@ -55,30 +55,10 @@ app.use(session({
 }));
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use('/weixin', function (req, res, next) {
-  var signature = req.signature;
-  var timestamp = req.timestamp;
-  var nonce = req.nonce;
 
-  var shasum = crypto.createHash('sha1');
-  var arr = [token, timestamp, nonce].sort();
-  shasum.update(arr.join(''));
-
-  return shasum.digest('hex') === signature;
-});
-
-// app.use('/weixin', wechat(config.weixin, function (req, res, next) {
-//     var message = req.weixin;
-//     console.log(message);
-//     res.reply([
-//       {
-//         title: '你来我家接我吧',
-//         description: '这是女神与高富帅之间的对话',
-//         picurl: 'http://sh.zuimeng.org/build/img/mass.jpeg',
-//         url: 'http://sh.zuimeng.org/'
-//       }
-//     ]);
-// }));
+app.use('/weixin', wechat(config.weixin, function (req, res, next) {
+    res.render(true);
+}));
 
 require('./config/routes')(app);
 if ('development' === app.get('env')) {
