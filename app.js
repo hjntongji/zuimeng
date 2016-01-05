@@ -72,7 +72,7 @@ app.use('/weixin', wechat(config.weixin, function (req, res, next) {
               content: 'text object',
               type: 'text'
             });
-        } else if (message.Content === 'hehe') {
+        } else if (message.Content === '奔跑') {
             // 回复一段音乐
             res.reply({
               type: "music",
