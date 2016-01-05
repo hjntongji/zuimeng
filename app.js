@@ -79,7 +79,7 @@ app.use('/weixin', wechat(config.weixin, function (req, res, next) {
               content: {
                 title: "来段音乐吧",
                 description: "奔跑",
-                musicUrl: "http://101.227.66.146/m10.music.126.net/20160105222708/eb18cc48a4e2d63c446be94b30a3682e/ymusic/72e7/cf9a/ea36/705206d3abe0cf9ada28c67ef49fb306.mp3?wshc_tag=0&wsts_tag=568bcced&wsid_tag=3a27ec99&wsiphost=ipdbm",
+                musicUrl: "http://96.f.1ting.com/568bd180/550c69d275390dcc4f5e7da37b94f35c/zzzzzmp3/2012aJan/16F/16zjtvknwh/02.mp3",
               }
             });
         } else {
