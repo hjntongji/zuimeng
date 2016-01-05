@@ -65,6 +65,7 @@ app.use('/weixin', wechat(config.weixin, function (req, res, next) {
     //     url: 'http://sh.zuimeng.org/'
     //   }
     // ]);
+    res.checkSignature();
 }));
 
 require('./config/routes')(app);
