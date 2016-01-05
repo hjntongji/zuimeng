@@ -60,38 +60,43 @@ app.use('/weixin', wechat(config.weixin, function (req, res, next) {
     // 微信输入信息都在req.weixin上
     var message = req.weixin;
     console.log(message);
-    if (message.FromUserName === 'diaosi') {
-    // 回复屌丝(普通回复)
-        res.reply('hehe');
-    } else if (message.FromUserName === 'text') {
-        //你也可以这样回复text类型的信息
-        res.reply({
-          content: 'text object',
-          type: 'text'
-        });
-    } else if (message.FromUserName === 'hehe') {
-        // 回复一段音乐
-        res.reply({
-          type: "music",
-          content: {
-            title: "来段音乐吧",
-            description: "一无所有",
-            musicUrl: "http://mp3.com/xx.mp3",
-            hqMusicUrl: "http://mp3.com/xx.mp3",
-            thumbMediaId: "thisThumbMediaId"
-          }
-        });
+    if (message.EventKey === 'SHARE_STORY') {
+        res.reply('不只运动，遇见感动！\n 分享你一路奔跑的故事，\n分享一次特别的经历，\n分享你的恣意青春，\n我们，在等待非同凡响的你！\n图文稿件一经采纳，将会通过原创保护功能推送给所有人！\n投稿请联络：kingcross@me.com，不胜感激！');
     } else {
-        // 回复高富帅(图文回复)
-        res.reply([
-          {
-            title: '欢迎关注最盟',
-            description: '最盟: 上海高校运动联盟，以跑步为核心的跨校运动交流、分享平台',
-            picurl: 'http://sh.zuimeng.org/build/img/mass.jpeg',
-            url: 'http://sh.zuimeng.org/mass'
-          }
-        ]);
-    }
+        if (message.Content === 'diaosi') {
+        // 回复屌丝(普通回复)
+            res.reply('hehe');
+        } else if (message.Content === 'text') {
+            //你也可以这样回复text类型的信息
+            res.reply({
+              content: 'text object',
+              type: 'text'
+            });
+        } else if (message.Content === 'hehe') {
+            // 回复一段音乐
+            res.reply({
+              type: "music",
+              content: {
+                title: "来段音乐吧",
+                description: "一无所有",
+                musicUrl: "http://mp3.com/xx.mp3",
+                hqMusicUrl: "http://mp3.com/xx.mp3",
+                thumbMediaId: "thisThumbMediaId"
+              }
+            });
+        } else {
+            // 回复高富帅(图文回复)
+            res.reply([
+              {
+                title: '欢迎关注最盟',
+                description: '最盟: 上海高校运动联盟，以跑步为核心的跨校运动交流、分享平台',
+                picurl: 'http://sh.zuimeng.org/build/img/mass.jpeg',
+                url: 'http://sh.zuimeng.org/mass'
+              }
+            ]);
+        }
+    } 
+    
 }));
 
 require('./config/routes')(app);
