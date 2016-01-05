@@ -54,23 +54,22 @@ app.use(session({
 }));
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use('/weixin', wechat(config.weixin, function (req, res, next) {
-    var message = req.weixin;
-    console.log(message);
-    // res.reply([
-    //   {
-    //     title: '你来我家接我吧',
-    //     description: '这是女神与高富帅之间的对话',
-    //     picurl: 'http://sh.zuimeng.org/build/img/mass.jpeg',
-    //     url: 'http://sh.zuimeng.org/'
-    //   }
-    // ]);
-    res.checkSignature();
-}));
+app.use('/weixin', wechat(config.weixin, wechat.checkSignature));
+
+// app.use('/weixin', wechat(config.weixin, function (req, res, next) {
+//     var message = req.weixin;
+//     console.log(message);
+//     res.reply([
+//       {
+//         title: '你来我家接我吧',
+//         description: '这是女神与高富帅之间的对话',
+//         picurl: 'http://sh.zuimeng.org/build/img/mass.jpeg',
+//         url: 'http://sh.zuimeng.org/'
+//       }
+//     ]);
+// }));
 
 require('./config/routes')(app);
-
-
 if ('development' === app.get('env')) {
     app.set('showStackError', true);
     app.use(logger(':method :url :status'));
