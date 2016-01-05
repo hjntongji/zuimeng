@@ -78,10 +78,8 @@ app.use('/weixin', wechat(config.weixin, function (req, res, next) {
               type: "music",
               content: {
                 title: "来段音乐吧",
-                description: "一无所有",
-                musicUrl: "http://mp3.com/xx.mp3",
-                hqMusicUrl: "http://mp3.com/xx.mp3",
-                thumbMediaId: "thisThumbMediaId"
+                description: "奔跑",
+                musicUrl: "http://101.227.66.146/m10.music.126.net/20160105222708/eb18cc48a4e2d63c446be94b30a3682e/ymusic/72e7/cf9a/ea36/705206d3abe0cf9ada28c67ef49fb306.mp3?wshc_tag=0&wsts_tag=568bcced&wsid_tag=3a27ec99&wsiphost=ipdbm",
               }
             });
         } else {
