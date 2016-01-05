@@ -57,7 +57,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 
 app.use('/weixin', wechat(config.weixin, function (req, res, next) {
-    res.render(true);
+    res.send('true');
 }));
 
 require('./config/routes')(app);
