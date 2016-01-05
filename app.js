@@ -1,3 +1,6 @@
+var config = require('./config/config');
+
+
 var express = require('express');
 var path = require('path');
 var session = require('express-session');
@@ -6,13 +9,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var fs = require('fs');
+var wechat = require('wechat');
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || config.port || 3000;
 
-var dbUrl = 'mongodb://localhost/zuimeng';
 var mongoose = require('mongoose');
 var mongoStore = require('connect-mongo')(session);
-mongoose.connect(dbUrl);
+mongoose.connect(config.db);
 
 var app = express();
 
@@ -41,9 +44,9 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
-    secret: 'zuimeng',
+    secret: config.sessionSecret,
     store: new mongoStore({
-        url: dbUrl,
+        url: config.db,
         collection: 'sessions'
     }),
     resave: false,
@@ -52,11 +55,23 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'dist')));
 require('./config/routes')(app);
 
+app.use('/weixin', wechat(config.weixin, function (req, res, next) {
+    var message = req.weixin;
+    console.log(message);
+    res.reply([
+      {
+        title: '你来我家接我吧',
+        description: '这是女神与高富帅之间的对话',
+        picurl: 'http://sh.zuimeng.org/build/img/mass.jpeg',
+        url: 'http://sh.zuimeng.org/'
+      }
+    ]);
+}));
+
 if ('development' === app.get('env')) {
     app.set('showStackError', true);
     app.use(logger(':method :url :status'));
     app.locals.pretty = true;
-    // mongoose.set('debug', true);
 }
 
 app.listen(port);
