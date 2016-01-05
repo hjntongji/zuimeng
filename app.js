@@ -63,14 +63,17 @@ app.use('/weixin', wechat(config.weixin, function (req, res, next) {
     if (message.EventKey === 'SHARE_STORY') {
         res.reply('不只运动，遇见感动！\n分享你一路奔跑的故事，\n分享一次特别的经历，\n分享你的恣意青春，\n我们，在等待非同凡响的你！\n图文稿件一经采纳，将会通过原创保护功能推送给所有人！\n投稿请联络：kingcross@me.com，不胜感激！');
     } else {
-        if (message.Content === 'diaosi') {
-        // 回复屌丝(普通回复)
-            res.reply('hehe');
-        } else if (message.Content === 'text') {
-            //你也可以这样回复text类型的信息
+        if (message.Content === '成绩') {
+            res.reply(
+              {
+                type: 'text',
+                content: '<a href="http:\/\/zuicool.com\/results">成绩查询</a>'
+              }
+            );
+        } else if (message.Content.indexOf('登高') >= 0) {
             res.reply({
-              content: 'text object',
-              type: 'text'
+                type: 'text',
+                content: '<a href="http://www.dfmzdg.com/index.php/home/score">登高成绩查询</a>'
             });
         } else if (message.Content === '奔跑') {
             // 回复一段音乐
