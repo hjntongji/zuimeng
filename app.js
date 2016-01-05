@@ -85,10 +85,10 @@ app.use('/weixin', wechat(config.weixin, function (req, res, next) {
         // 回复高富帅(图文回复)
         res.reply([
           {
-            title: '你来我家接我吧',
-            description: '这是女神与高富帅之间的对话',
-            picurl: 'http://nodeapi.cloudfoundry.com/qrcode.jpg',
-            url: 'http://nodeapi.cloudfoundry.com/'
+            title: '欢迎关注最盟',
+            description: '最盟: 上海高校运动联盟，以跑步为核心的跨校运动交流、分享平台',
+            picurl: 'http://sh.zuimeng.org/build/img/mass.jpeg',
+            url: 'http://sh.zuimeng.org/mass'
           }
         ]);
     }
