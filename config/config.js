@@ -48,7 +48,7 @@ var config = {
     appid: 'wx35ee7d6d83988da7',
     token: 'zuimengorg',
     // secret: 'd74b37620ecaa50b8bc7d399c2eebe0f',
-    encodingAESKey: 'C76kn6WswIvaf173aEKBKHVXCrxd61hxnjhPd6bzhqH'
+    // encodingAESKey: 'C76kn6WswIvaf173aEKBKHVXCrxd61hxnjhPd6bzhqH'
   },
 
   // // RSS配置

@@ -10,6 +10,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var wechat = require('wechat');
+var crypto = require('crypto');
 
 var port = process.env.PORT || config.port || 3000;
 
@@ -54,7 +55,17 @@ app.use(session({
 }));
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use('/weixin', wechat(config.weixin, wechat.checkSignature));
+app.use('/weixin', function (req, res, next) {
+  var signature = req.signature;
+  var timestamp = req.timestamp;
+  var nonce = req.nonce;
+
+  var shasum = crypto.createHash('sha1');
+  var arr = [token, timestamp, nonce].sort();
+  shasum.update(arr.join(''));
+
+  return shasum.digest('hex') === signature;
+});
 
 // app.use('/weixin', wechat(config.weixin, function (req, res, next) {
 //     var message = req.weixin;
