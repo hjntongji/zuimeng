@@ -70,11 +70,6 @@ app.use('/weixin', wechat(config.weixin, function (req, res, next) {
                 content: '<a href="http:\/\/zuicool.com\/results">成绩查询</a>'
               }
             );
-        } else if (message.Content.indexOf('登高') >= 0) {
-            res.reply({
-                type: 'text',
-                content: '<a href="http://www.dfmzdg.com/index.php/home/score">登高成绩查询</a>'
-            });
         } else if (message.Content === '奔跑') {
             // 回复一段音乐
             res.reply({
