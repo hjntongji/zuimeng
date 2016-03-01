@@ -59,7 +59,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/weixin', wechat(config.weixin, function (req, res, next) {
     // 微信输入信息都在req.weixin上
     var message = req.weixin;
-    // console.log(message);
+    console.log(message);
     if (message.EventKey === 'SHARE_STORY') {
         res.reply('不只运动，遇见感动！\n分享你一路奔跑的故事，\n分享一次特别的经历，\n分享你的恣意青春，\n我们，在等待非同凡响的你！\n图文稿件一经采纳，将会通过原创保护功能推送给所有人！\n投稿请联络：kingcross@me.com，不胜感激！');
     } else {
